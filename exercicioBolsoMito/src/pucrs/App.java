@@ -8,18 +8,39 @@ public class App {
 	}
 	public static String Soma (int cor){
 	    if (cor == 1){
-            System.out.println("RED");
+            return "RED";
         }else if(cor == 2){
-            System.out.println("Yellow");
+            return"Yellow";
         }else if(cor ==3 ){
-            System.out.println("Blue");
+            return "Blue";
         }else if(cor ==4){
-            System.out.println("Violet");
+            return "Violet";
         }else{
-            System.out.println("Cor nao encontrada. Tente novamente mais tarde.");
+            return "Cor nao encontrada. Tente novamente mais tarde.";
         }
 
     }
 
+    public static String situacao(double media,boolean temg2){
+
+	    if (media >= 0 && media <= 10.0) {
+            if (temg2) {
+                if (media >= 7.0) {
+                    return "Aprovado";
+                } else if (media >= 4.0 && media < 7.0) {
+                    return "G2";
+                } else {
+                    return"Reprovado";
+                }
+            } else if (media >= 5.0) {
+                return "Aprovado";
+            } else {
+                return "Reprovado";
+            }
+        }else {
+             return "Erro, média inexistente.";
+        }
+
+    }
 
 }
