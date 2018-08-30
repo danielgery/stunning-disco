@@ -61,7 +61,7 @@ public class App {
 	public static String arquivo(String vet){
 		if(vet.charAt(0) == 'A' || vet.charAt(0) == 'B' ){
 			if(Character.isDigit(vet.charAt(1))){
-				return "arqAtualizado";
+				return "Arquivo Atualizado";
 			}else
 				return "Y";
 		}else

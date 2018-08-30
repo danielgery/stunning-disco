@@ -60,6 +60,8 @@ public class AppTest {
 
     @Test
     public void arquivo() {
-
+        assertEquals("Arquivo Atualizado", App.arquivo("A1"));
+        assertEquals("Y", App.arquivo("AB"));
+        assertEquals("X", App.arquivo("1A"));
     }
 }
