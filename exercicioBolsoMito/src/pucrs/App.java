@@ -20,6 +20,22 @@ public class App {
         }
 
     }
+	
+	/**
+	    0 – Sucesso 
+		1 – erro no valor 
+		2 – status incorreto
+		 regular, estudante/aposentado ou VIP
+	*/
+	public static int tvAssinatura(Double pagamento, String status) {
+			if (pagamento >= 0.01 || pagamento <= 99999.0){
+				if(status.equals("regular") || status.equals("estudante") || status.equals("aposentado") || status.equals("VIP")){
+					return 0;
+				}else
+					return 2;
+			}else
+			return 1;
+		}
 
     public static String situacao(double media,boolean temg2){
 
